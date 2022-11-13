@@ -7,6 +7,8 @@ import java.util.Collections;
 public class BubbleSort {
 	
 	public static void main(String[] args) {
+		
+		//bubble sort comment added
 		bubbleSortUsingArray();
 		
 		ArrayList<Integer> list1= new ArrayList<Integer>();
