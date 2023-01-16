@@ -10,8 +10,8 @@ public class IntersectionAndUNionOf2Arrays {
 	int[] arr1= {7, 1, 5, 2, 3, 6};
 	int arr2[] = {3, 8, 6, 20, 7} ;
 	
-	Intersection(arr1, arr2);
-	//Union(arr1, arr2);
+	//Intersection(arr1, arr2);
+	Union(arr1, arr2);
 	}
 	public static void Intersection(int[] arr1, int[]arr2)
 	{
@@ -31,7 +31,7 @@ public class IntersectionAndUNionOf2Arrays {
 			
 			if(map1.keySet().contains(i))
 			{
-				System.out.println(i);
+				System.out.println(i + " at index "+map1.get(i));
 				map1.get(i);
 				
 			}
