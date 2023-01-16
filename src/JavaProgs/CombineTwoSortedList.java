@@ -29,14 +29,10 @@ public class CombineTwoSortedList {
 		List<Integer> sList1 = Arrays.asList(1,1,2,5,8);
 		  List<Integer> sList2 = Arrays.asList(3,4,6);
 		  merge_sorted(sList1,sList2);
-		  
-		
-		
-	}
+}
 
 	
-	public static void merge_sorted(
-		    List<Integer> sList1, List<Integer> sList2) {
+	public static void merge_sorted(List<Integer> sList1, List<Integer> sList2) {
 
 		    List<Integer> mergedSortedList = new ArrayList<>();
 		    int idx1 = 0;
@@ -63,8 +59,6 @@ public class CombineTwoSortedList {
             
 		    System.out.println(mergedSortedList);
 		  }
-	
-
 }
 
 
