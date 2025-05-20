@@ -59,9 +59,9 @@ public class Anagrams {
                 j++;
             }
         }
-        
         return ans;
     }
+	
 }
 
 
