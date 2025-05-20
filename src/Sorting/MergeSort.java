@@ -13,71 +13,63 @@ public class MergeSort {
 	}
 	public static void mergeSort(int[] array)
 	{
-		int inputLength=array.length;
-		if(inputLength<2)
+		if(array.length<2)
 		{
 			return;
 		}
-		int midIndex= inputLength/2; //mid= low+(high-low)/2;
+		int midIndex=array.length/2;
 		
-		int[] leftArray=new int[midIndex];
+		int[] leftArr=new int[midIndex];
+		int[] rightArr= new int[array.length-midIndex];
 		
-		int[] rightArray=new int[inputLength-midIndex];
-		for(int i=0; i< midIndex; i++)
+		for(int i=0; i<midIndex; i++)
 		{
-			leftArray[i]= array[i];
-			
+			leftArr[i]=array[i];
 		}
 		
-		for(int i=midIndex; i< inputLength; i++)
+		for(int i=midIndex;i<array.length; i++)
 		{
-			rightArray[i-midIndex]= array[i];
-			
+			rightArr[i-midIndex]=array[i];
 		}
-		mergeSort(leftArray);
-		mergeSort(rightArray);
-		helperMerge(array, leftArray, rightArray);
 		
+		mergeSort(leftArr);
+		mergeSort(rightArr);
 		
- 	
+		merge(array, leftArr, rightArr);
 	}
-
-	public static void helperMerge(int[] array, int[] leftArray, int[] rightArray)
+	
+	public static void merge(int[] array, int[] leftArr, int[] rightArr)
 	{
-		int leftSize=leftArray.length;
-		int rightSize= rightArray.length;
-		int i=0 , j=0, k=0;
+		int i=0; int j=0; int k=0;
 		
-		while(i<leftSize && j<rightSize)
+		while(i<leftArr.length && j<rightArr.length)
 		{
-			if(leftArray[i]<=rightArray[j])
+			if(leftArr[i]<rightArr[j])
 			{
-				array[k]=leftArray[i];
+				array[k]= leftArr[i];
 				i++;
 			}
-			else
+			else if(rightArr[j]<leftArr[i])
 			{
-				array[k]=rightArray[j];
+				array[k]= rightArr[j];
 				j++;
 			}
 			k++;
 		}
-
-		while(i<leftSize)
+		
+		while(i<leftArr.length)
 		{
-			array[k]=leftArray[i];
+			array[k]= leftArr[i];
 			i++;
 			k++;
 		}
-			
-		while(j<rightSize)
+		
+		while(j<rightArr.length)
 		{
-			array[k]=rightArray[j];
+			array[k]= rightArr[j];
 			j++;
 			k++;
 		}
-		
-		
 	}
 
 }

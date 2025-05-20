@@ -32,18 +32,13 @@ public class TwoSumInSortedArray {
 		 {
 		 	int num2=target-arr[i];
 			 map1.put(arr[i], i);
-			 
-			/* if(map1.containsKey(num2))
-			 {
-				 System.out.println("print numbers" +a[i] + " "+ map1.);
-			 }*/
+			
 			 
 			for(int key:map1.keySet())
 			 {
 				if(key==num2)
 				{
-					//System.out.println("print numbers" +arr[i] + " "+key);
-					//System.out.println("print indexes" + i + " " +map1.get(key));
+				
 					return new int[] {arr[i], key}; 
 				 }
 			

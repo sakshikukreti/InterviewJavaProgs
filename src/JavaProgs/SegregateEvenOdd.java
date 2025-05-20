@@ -9,7 +9,7 @@ public class SegregateEvenOdd {
 		segregateZeroOnes();
 	}
 	
-	//Segregate Even and Odd numbers, Put even first and then Odd
+	//Segregate Even and Odd numbers, Put even first and then odd
 	
 	public static void evenOdd()
 	{
